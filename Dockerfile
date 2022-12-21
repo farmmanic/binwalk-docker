@@ -45,7 +45,7 @@ RUN git clone https://github.com/Trickery710/sasquatch /tmp/sasquatch && \
 
 # Install jefferson to extract JFFS2 file systems
 RUN pip3 install cstruct && \
-    git clone https://github.com/sviehb/jefferson /tmp/jefferson && \
+    git clone https://github.com/Trickery710/jefferson /tmp/jefferson && \
     cd /tmp/jefferson && \
     python3 setup.py install && \
     cd / && \
@@ -66,12 +66,12 @@ RUN git clone https://github.com/Trickery710/yaffshiv /tmp/yaffshiv && \
     rm -rf /tmp/yaffshiv
 
 # Install unstuff (closed source) to extract StuffIt archive files
-RUN mkdir -p /tmp/unstuff && \
-    cd /tmp/unstuff && \
-    wget -O - https://downloads.tuxfamily.org/sdtraces/stuffit520.611linux-i386.tar.gz | tar -zxv && \
-    install -m 0755 bin/unstuff /usr/local/bin/ && \
-    rm -rf /tmp/unstuff
-
+#/RUN mkdir -p /tmp/unstuff && \
+#    cd /tmp/unstuff && \
+#    wget -O - https://downloads.tuxfamily.org/sdtraces/stuffit520.611linux-i386.tar.gz | tar -zxv && \
+#    install -m 0755 bin/unstuff /usr/local/bin/ && \
+#   rm -rf /tmp/unstuff
+#
 # Workspace volume from host
 VOLUME [ "/workspace" ]
 WORKDIR /workspace
