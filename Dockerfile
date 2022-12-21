@@ -1,4 +1,4 @@
-FROM ubuntu:20.04
+FROM ubuntu:rolling
 
 # Set shell to bash instead of dash
 ARG DEBIAN_FRONTEND=noninteractive
