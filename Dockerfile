@@ -1,15 +1,18 @@
 FROM ubuntu:rolling
 
 # Set shell to bash instead of dash
-ARG DEBIAN_FRONTEND=noninteractive
+RUN export DEBIAN_FRONTEND=noninteractive
 RUN echo "dash dash/sh boolean false" | debconf-set-selections && dpkg-reconfigure dash
 
 # Binwalk installation instructions from:
 # https://github.com/ReFirmLabs/binwalk/blob/master/INSTALL.md
 RUN apt-get update && apt-get install -y --no-install-recommends \
     arj \
+    apt-utils \
     binwalk \
     build-essential \
+    zip \
+    unzip \
     bzip2 \
     cabextract \
     cramfsswap \

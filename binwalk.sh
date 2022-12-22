@@ -4,4 +4,5 @@ docker run -it --rm \
   -v "$(pwd):/workspace" \
   -w /workspace \
   sheabot/binwalk \
+  --run-as=root \
   "$@"
