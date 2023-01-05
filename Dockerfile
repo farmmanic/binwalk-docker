@@ -1,4 +1,5 @@
-FROM ubuntu:rolling
+#docker build -t sheabot/binwalk .
+FROM ubuntu:20.04
 
 # Set shell to bash instead of dash
 RUN export DEBIAN_FRONTEND=noninteractive
