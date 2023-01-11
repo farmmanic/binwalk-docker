@@ -1,3 +1,4 @@
-
+**/*.hist
+**/*.key
 sasquatch/
-.dockerignore 
+!.dockerignore 
