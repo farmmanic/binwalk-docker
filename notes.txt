@@ -1,0 +1,4 @@
+
+build the docker image
+docker build -t sheabot/binwalk .
+
