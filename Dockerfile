@@ -1,4 +1,4 @@
-FROM ubuntu:20.04
+FROM ubuntu:mantic-20240216
 
 # Set shell to bash instead of dash
 ARG DEBIAN_FRONTEND=noninteractive
